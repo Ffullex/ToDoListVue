@@ -1,13 +1,16 @@
 <template>
+  <Header/>
   <ToDoForm />
 </template>
 
 <script>
 import ToDoForm from './components/ToDoForm'
+import Header from "./components/Header";
 export default {
   name: 'App',
   components: {
-    ToDoForm
+    ToDoForm,
+    Header
   }
 }
 </script>

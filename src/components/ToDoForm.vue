@@ -1,7 +1,7 @@
 <template>
-<form>
-  <input type="text" name="area" value="MeoW ^^">
-</form>
+<div id="area">
+  <input type="text" value="Введите текст">
+</div>
 </template>
 
 <script>
@@ -11,5 +11,13 @@ export default {
 </script>
 
 <style scoped>
-
+#area{
+  min-width: 500px;
+  color: #6a0554;
+  background-color: #b125cb;
+}
+#area input{
+  color: aqua;
+  background-color: #6a0554;
+}
 </style>
