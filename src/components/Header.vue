@@ -11,6 +11,7 @@ export default {
 <style scoped>
   #header {
     font-size: 50px;
-    color: #6a0554;
+    color: #000000;
+    border-radius: 55%;
   }
 </style>
