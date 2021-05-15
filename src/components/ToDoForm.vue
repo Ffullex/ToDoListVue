@@ -39,7 +39,8 @@ export default {
       this.list = []
       this.id = 1;
     },
-    clear: function (id) {this.list.filter(element => element.id !== id)}
+    clear: function (id) {this.list = this.list.filter(element => element.id !== id)
+    this.id = id}
   }
 }
 
