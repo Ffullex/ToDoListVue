@@ -3,25 +3,28 @@
   <p>Введите текст:
     <input type="text" v-model="userText"  placeholder="Сам такой">
     <button v-on:click="add" > Добавить </button>
-    <button v-on:click="clearAll"> Удалить всё </button>
+    <button v-on:click="clearAll">Удалить</button>
   </p>
 
   <div v-for="item in list" id="list" :key="item.id">
-    {{item.id + '. '}}{{item.title}}
-  </div>
+      <Element :element="item"/>
 
+  </div>
 
 </div>
 </template>
 
 <script>
+import Element from "./Element";
 export default {
   name: "ToDoForm",
+  components: {
+    Element
+  },
   data: () => ({
     userText: '',
     list:[],
     id: 1,
-    // checkbox: checked =
   }),
   methods: {
     add: function (){
@@ -29,11 +32,9 @@ export default {
         .push({
           id: this.id,
           title: this.userText,
-          // checkbox: this.checkbox
         });
         this.userText = '';
         this.id += 1;
-
     },
     clearAll: function () {
       this.list
@@ -42,12 +43,9 @@ export default {
             userText: this.userText
           })
         this.id = 1;
-      },
-    clear: function () {
-      this.list
-        .splice({
-
-        })
+    },
+    clear: function (id) {
+      this.list.splice(id, 1)
     }
   }
 }
