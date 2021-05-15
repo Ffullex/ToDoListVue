@@ -7,11 +7,10 @@
 </template>
 
 <script>
-import clear from './ToDoForm'
 export default {
   name: "Element",
   props: {
-    clear: [clear],
+    clear: Function,
     element: Object,
   },
 

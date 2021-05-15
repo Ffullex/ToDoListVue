@@ -7,8 +7,7 @@
   </p>
 
   <div v-for="item in list" id="list" :key="item.id">
-      <Element :element="item"/>
-
+      <Element :element="item" :clear="clear"/>
   </div>
 
 </div>
@@ -37,16 +36,10 @@ export default {
         this.id += 1;
     },
     clearAll: function () {
-      this.list
-          .splice({
-            id: this.id,
-            userText: this.userText
-          })
-        this.id = 1;
+      this.list = []
+      this.id = 1;
     },
-    clear: function (id) {
-      this.list.splice(id, 1)
-    }
+    clear: function (id) {this.list.filter(element => element.id !== id)}
   }
 }
 
