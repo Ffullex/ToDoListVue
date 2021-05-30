@@ -14,7 +14,20 @@
         <hr/>
         <alert />
         <hr />
-        <Termometr />
+        <input v-model="inputCountTerm" type="number" />
+        <Termometr :count-term="inputCountTerm" />
+        <hr />
+        <TrafficLight />
+        <hr />
+        <counter />
+        <hr />
+        <variable-step-counter />
+        <hr />
+        <select-box />
+        <hr />
+        <unimportant-information-component />
+        <hr />
+        <accessing-the-network />
       </div>
     </div>
   </div>
@@ -27,10 +40,22 @@ import Like from "./components/Like";
 import ReverseCounting from "./components/ReverseCounting";
 import ReverseLine from "./components/ReverseLine";
 import Alert from "./components/Alert";
-import Termometr from "./components/Termometr";
+import Termometr from "./components/Termometr"
+import TrafficLight from "./components/TrafficLight";
+import Counter from "./components/Counter";
+import VariableStepCounter from "./components/VariableStepCounter";
+import SelectBox from "./components/SelectBox";
+import UnimportantInformationComponent from "./components/UnimportantInformationComponent";
+import AccessingTheNetwork from "./components/AccessingTheNetwork";
 export default {
   name: 'App',
   components: {
+    AccessingTheNetwork,
+    UnimportantInformationComponent,
+    SelectBox,
+    VariableStepCounter,
+    Counter,
+    TrafficLight,
     Termometr,
     Alert,
     ReverseLine,
@@ -38,7 +63,10 @@ export default {
     ToDo,
     Header,
     Like
-  }
+  },
+  data: () => ({
+    inputCountTerm: 1,
+  })
 }
 </script>
 
