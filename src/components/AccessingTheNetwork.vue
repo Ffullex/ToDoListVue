@@ -1,5 +1,5 @@
 <template>
-  <div>Сделать</div>
+  <div>Запрос к сети</div>
 </template>
 
 <script>

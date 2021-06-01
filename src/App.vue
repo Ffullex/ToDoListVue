@@ -76,7 +76,7 @@ export default {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
-  color: aquamarine;
+  color: #000000;
 }
 body {
   height: 100%;

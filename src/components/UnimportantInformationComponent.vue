@@ -1,5 +1,5 @@
 <template>
-  <div>Сделать</div>
+  <div>Компонент для неважной информации</div>
 </template>
 
 <script>

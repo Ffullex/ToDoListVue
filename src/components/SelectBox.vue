@@ -1,5 +1,5 @@
 <template>
-  <div>Сделать</div>
+  <div>Селектбокс</div>
 </template>
 
 <script>

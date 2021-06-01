@@ -1,5 +1,5 @@
 <template>
-  <div>Сделать</div>
+  <div>Счётчик с переменным шагом</div>
 </template>
 
 <script>
